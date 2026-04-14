@@ -1437,15 +1437,13 @@ local function Hide(notify: boolean?)
 
 
 
--- SHOW,OPEN,CLOSE,SHOW..,MOD,MODDED (fast find the open/close thing)
+-- SHOW,OPEN,CLOSE,SHOW..,MOD,MODDED (fast find the open/close thing) -70
 	if useMobilePrompt and MPrompt then
-		TweenService:Create(MPrompt, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), 
-		{Size = UDim2.new(0, 10, 0, 30),
-		Position = UDim2.new(0.5, -70, 0, 30),
-		BackgroundTransparency = 0.8}):Play()
-		TweenService:Create(MPrompt.Title,
-		TweenInfo.new(0.5,Enum.EasingStyle.Exponential),
-		{TextTransparency = 0.5}):Play() 
+		TweenService:Create(MPrompt, TweenInfo.new(0.1, Enum.EasingStyle.Exponential),{
+    Size = UDim2.new(0, 50, 0, 50),
+    Position = UDim2.new(0.5, -70, -70, 0.5),
+    BackgroundTransparency = 0.8}):Play()
+    TweenService:Create(MPrompt.Title,TweenInfo.new(0.2,Enum.EasingStyle.Exponential),{TextTransparency = 1}):Play() 
 	end
 
 
