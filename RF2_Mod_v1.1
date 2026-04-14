@@ -1441,7 +1441,7 @@ local function Hide(notify: boolean?)
 	if useMobilePrompt and MPrompt then
 		TweenService:Create(MPrompt, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), 
 		{Size = UDim2.new(0, 10, 0, 30),
-		Position = UDim2.new(0.5, 0, 0, 60),
+		Position = UDim2.new(0.5, -70, 0, 30),
 		BackgroundTransparency = 0.8}):Play()
 		TweenService:Create(MPrompt.Title,
 		TweenInfo.new(0.5,Enum.EasingStyle.Exponential),
