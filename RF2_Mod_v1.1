@@ -1231,7 +1231,7 @@ function RayfieldLibrary:Notify(data) -- action e.g open messages
 		newNotification.Icon.ImageTransparency = 1
 		newNotification.Icon.BackgroundTransparency = 1
 
-		task.wait()
+		task.wait(0.1)
 
 		newNotification.Visible = true
 
@@ -1436,7 +1436,7 @@ local function Hide(notify: boolean?)
 	end
 
 	if useMobilePrompt and MPrompt then
-		TweenService:Create(MPrompt, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), {Size = UDim2.new(0, 120, 0, 30), Position = UDim2.new(0.5, 0, 0, 20), BackgroundTransparency = 0.3}):Play()
+		TweenService:Create(MPrompt, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), {Size = UDim2.new(0, 120, 0, 30), Position = UDim2.new(0.5, 0, 0, 20), BackgroundTransparency = 0.1}):Play()
 		TweenService:Create(MPrompt.Title, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), {TextTransparency = 0.3}):Play()
 	end
 
